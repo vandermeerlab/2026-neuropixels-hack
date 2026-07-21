@@ -1,0 +1,45 @@
+# LFP Extraction and Kilosort4 Parameters
+# Lines starting with # are comments and will be ignored
+
+# Required parameters (output firectory should exist)
+CATGT_OUTPUT_DIR = D:\quadBaseTest\CatGT_New\catgt_fullTest_QuadBase_g0
+OUTPUT_DIR = D:\quadBaseTest\preprocessed
+SESSION_ID = fullTest_QuadBase
+FAST_STORAGE_DIR = F:\KS4_outputs
+
+# Probe configuration
+# List of probe indices to process (comma-separated, no spaces)
+PROBE_INDICES = 0
+# If you want to process only specific probes for LFP or Kilosort modify these lines (empty if you want to skip all probes)
+EXTRACT_LFP_FOR = 0
+RUN_KILOSORT_FOR = 
+
+# Optional processing selections
+
+# Bad channel options
+OVERRIDE_BAD_CHANNELS = False
+# MANUAL_BAD_CHANNELS_FILE = path/to/manual_bad_channels.json
+MAX_BAD_CHANNELS = 25
+
+# LFP channel selection options
+OVERRIDE_LFP_CHANNELS = False
+# MANUAL_LFP_CHANNELS_FILE = path/to/manual_lfp_channels.json
+
+# LFP parameters
+LFP_SAMPLE_RATE = 2500
+LFP_HIGH_PASS = 1
+LFP_LOW_PASS = 400
+LFP_SPACING = 100
+INTER_SHANK_SPACE = 250
+
+# High-pass filter parameter for AP band
+AP_HIGH_PASS = 400.0
+
+# Kilosort4 parameters (as JSON)
+KS_PARAMS = {"delete_recording_dat": true, "use_binary_file": true}
+
+# Processing parameters
+LFP_NUM_JOBS = 6
+SI_NUM_JOBS = 4
+LFP_CHUNK_DURATION = 30s
+SI_CHUNK_DURATION = 1s
