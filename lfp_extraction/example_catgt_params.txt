@@ -1,0 +1,29 @@
+# CatGT Parameters
+# Lines starting with # are comments and will be ignored
+
+# Required parameters
+SOURCE_DIR = D:\vCA1\M656\rawdata\M656_2026_03_26
+DEST_DIR = D:\Temp
+SESSION_NAME = M656_2026_03_26
+
+# Uncomment the CatGT version you want to use (v5.3 for quad base)
+# CATGT_PATH = D:\CatGT-win
+CATGT_PATH = C:\CatGT-win-v53
+
+# Probe configuration
+# List of probe indices to process (comma-separated, no spaces)
+PROBE_INDICES = 0,1
+
+# Processing parameters
+CHECK_INTERVAL = 120
+
+# Channel configuration
+# For ANALOG_CHANNELS, format is a dictionary with channel names as keys and [thresh1, thresh2] as values
+ANALOG_CHANNELS = {"XA0": [1, 3], "XA1": [1, 3], "XA2": [1, 3], "XA3": [1, 3], "XA4": [1, 3], "XA5": [1, 3], "XA6": [1, 3], "XA7": [1, 3]}
+# List of digital channels (e.g., XD2, XD3) as comma-separated strings
+DIGITAL_CHANNELS = XD1,XD5,XD6
+NUM_ANALOG_CHANNELS = 8
+
+# Optional: additional CatGT flags passed verbatim to the command (JSON list of strings)
+# Example: MANUAL_PARAMS = ["-no_auto_sync", "-no_tshift"]
+MANUAL_PARAMS = []
